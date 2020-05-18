@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学校JavaScript</title>
+</head>
+<body>
+    <script>
+    function sayHello(){
+        document.writeln('Hello World JavaScript!');
+        alert('hello world javascript');
+    }
+
+    sayHello();
+
+    var sayHelloObject=function(x){
+        document.writeln('<br>')
+        document.writeln("日期是",x)
+    }(519)
+
+    //sayHelloObject(5.18)
+
+    var study_var=function(){
+        var str1="变量名";
+        var num=1.5;
+        age=23;
+        var cars=new Array("A","B","C");
+        document.writeln("<br>"+str1); 
+        document.writeln("<br>"+num+"<br>"+age);
+        document.writeln("<br>"+cars);
+    }
+
+    study_var();
+
+    var sum=function(start,end){
+        var s=0;
+        var i;
+        for(i=start;i<=end;i++){
+            s=s+i;
+        }
+        document.writeln("<br>"+s);
+    }(1,100);
+
+    var sum_while=function(start,end){
+        var s=0;
+        var i=start;
+        while(i<=end){
+            if(i%2==1){
+                s=s+i;
+            }
+            i=i+1;
+        }
+        document.writeln("<br>"+s)
+    }(1,100)
+    
+    var for_in=function(arr){
+        for(var each in arr){
+            document.writeln("<br>");
+            document.writeln("arr["+each+"]"+"="+arr[each])
+        }
+    }(new Array("a","tsyaudif",1,2,3,4,[2,7,3,4,5]))
+
+    </script>
+</body>
+</html>
